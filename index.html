@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CraftDraw V2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="toolbar">
+        <div class="tool-group">
+            <button class="tool-btn active" id="pencilBtn">Pencil</button>
+            <button class="tool-btn" id="sprayBtn">Spray</button>
+            <button class="tool-btn" id="highlighterBtn">Highlighter</button>
+            <button class="tool-btn" id="eraserBtn">Eraser</button>
+            <button class="tool-btn" id="textBtn">Text</button>
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="color-group">
+            <div class="color-swatch active" style="background-color: #000000;" data-color="#000000"></div>
+            <div class="color-swatch" style="background-color: #ff3b30;" data-color="#ff3b30"></div>
+            <div class="color-swatch" style="background-color: #34c759;" data-color="#34c759"></div>
+            <div class="color-swatch" style="background-color: #007aff;" data-color="#007aff"></div>
+            <div class="color-swatch" style="background-color: #ff9500;" data-color="#ff9500"></div>
+            <input type="color" id="customColor" value="#000000">
+        </div>
+
+        <div class="separator"></div>
+
+        <div class="size-group">
+            <label for="brushSize">Size:</label>
+            <input type="range" id="brushSize" min="2" max="60" value="8">
+            <span id="sizeValue">8px</span>
+        </div>
+
+        <div class="separator"></div>
+
+        <button class="action-btn" id="clearBtn">Clear</button>
+    </div>
+
+    <canvas id="paintCanvas"></canvas>
+
+    <div id="textInputContainer">
+        <textarea id="textInput" placeholder="Type text here... (Enter to finish, Esc to cancel)"></textarea>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
